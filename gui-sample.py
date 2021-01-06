@@ -1,18 +1,21 @@
 """
 Demonstration GUI for Asterisk Test
 
-When file is running, camera control buttons and file buttons will not have any functionality,
+This is an example of a GUI I made for a research group at Oregon State University that I work with. 
+This interface was used to help perform tests of robotic grasping systems.
+
+When the file is running, camera control buttons and file buttons will not have any functionality,
 so don't worry if they are not working. This is so that the program will run well on any computer
 without needing to run a connected camera or to write files to the system drive.
 
 Make sure to install tkinter before running if you haven't already.
 
-pip install python-tk
+pip install python-tk (terminal)
 
-Window is currently scaled to run well on Windows 10 1080p 16x9. Changing some of these
+The test window is currently scaled to run well on Windows 10 1080p 16x9. Changing some of these
 factors (such as Ubuntu instead of Windows) can mess with the scaling, so if that is an
-issue for you, you can manually adjust the window size by dragging or adjust the window dimensions
-below (line 31).
+issue for you, you can manually adjust the window size by dragging the borders or adjust the 
+window dimensions below (line 34).
 
 Written by Jack Stevenson in 2020/2021, email
 stevenj4@oregonstate.edu or jstevenson567@gmail.com for questions and to offer feedback
@@ -85,6 +88,9 @@ trial_selection = StringVar()
 type_selection = StringVar()
 
 
+# Functions to get user inputs
+
+
 def show_name(*args):
     name_sel = nb.curselection()
     name_index = int(name_sel[0])
@@ -124,6 +130,9 @@ file_path = StringVar()
 file_name = StringVar()
 
 
+# Function to create file path and name
+
+
 def file_path_function(*args):
     name_sel = nb.curselection()
     hand_sel = hb.curselection()
@@ -145,6 +154,9 @@ def file_path_function(*args):
 
     file_name.set(f"{name}_{hand}_{dir}_{type}_{trial}")
     file_path.set(f"data/{name}/{hand}/{dir}/{type}/{trial}/")
+
+    
+# Makes a confirmation window on quit command
 
 
 def quit_confirm():
@@ -289,6 +301,5 @@ hb.bind('<<ListboxSelect>>', show_hand)
 db.bind('<<ListboxSelect>>', show_dir)
 tb.bind('<<ListboxSelect>>', show_trial)
 ttb.bind('<<ListboxSelect>>', show_type)
-
 
 window.mainloop()

@@ -31,7 +31,7 @@ window.title('Asterisk Test Portal')
 
 # If you are having scaling issues, feel free to change the window size below
 
-window.geometry('470x600')
+window.geometry('470x570')
 
 # TEST INPUTS SECTION
 # Edit this section to add/remove users, hands, etc.

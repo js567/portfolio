@@ -72,7 +72,7 @@ To perform a test:
 6. File location should be displayed on the window 
 7. Use 'Quit' or exit out of window to close program
 
-To seek help with the test or report a bug contact Jack Stevenson at stevenj4@oregonstate.edu or John Morrow IV at morrowjo@oregonstate.edu
+To seek help with the test or report a bug contact Jack Stevenson at stevenj4@oregonstate.edu
     ''')
 
 name = ''
